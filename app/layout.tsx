@@ -1,3 +1,4 @@
+import { SearchOverlay } from '../components/ui/SearchOverlay';
 import { Suspense } from 'react';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Script from 'next/script';
@@ -57,7 +58,8 @@ export default function RootLayout({
             Skip to main content
           </a>
           <Toaster closeButton position="bottom-right" />
-          <ToastProvider>{children}</ToastProvider>
+          <ToastProvider>{children}
+<SearchOverlay /></ToastProvider>
           {/* Analytics script loaded after user interaction to reduce main thread blocking */}
           <Script
             id="analytics-script"
